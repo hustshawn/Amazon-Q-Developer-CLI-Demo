@@ -1,66 +1,72 @@
-# Game Collection Repository
+# Amazon Q Developer CLI Demo
 
-This repository contains two classic arcade-style games implemented in Python using Pygame:
+A demonstration repository for showcasing Amazon Q Developer CLI capabilities.
 
-## Games Included
+## Overview
 
-### 1. Snake Game (贪吃蛇游戏)
-A modern implementation of the classic Snake game with multiple difficulty levels, sleek interface, and intuitive controls.
+This repository contains demo applications to demonstrate the features and capabilities of the Amazon Q Developer CLI. It includes multiple sample projects that you can use to test and explore Amazon Q's functionality.
 
-**Key Features:**
-- Classic snake gameplay with modern visual enhancements
-- Three difficulty levels (Easy, Medium, Hard)
-- Modern menu and game over screens
-- Support for keyboard and mouse controls
-- Real-time score display
-- Grid-based movement system
+## Projects
 
-[Go to Snake Game →](./snake-game/)
+- **pacman-nibbles**: A simple Pacman-inspired game
+- **snake-game**: A classic snake game implementation 
 
-### 2. Pacman-Nibbles
-A creative fusion of classic Pacman and Snake (Nibbles) games, combining mechanics from both.
+## Prerequisites
 
-**Key Features:**
-- Snake movement mechanics from Snake/Nibbles
-- Dot collection and maze navigation from Pacman
-- Ghosts that chase the player
-- Power pellets for eating ghosts
-- Snake growth when collecting dots
+- Python 3.8 or higher
+- pip (Python package installer)
 
-[Go to Pacman-Nibbles →](./pacman-nibbles/)
+## Installation
 
-## Repository Structure
-```
-.
-├── README.md          # This main repository documentation
-├── pacman-nibbles/    # Pacman-Nibbles game directory
-│   ├── README.md      # Game-specific documentation
-│   └── pacman_nibbles.py
-└── snake-game/        # Snake Game directory
-    ├── README.md      # Game-specific documentation 
-    └── snake_game.py
-```
+Clone the repository:
 
-## Requirements
-
-Both games require:
-- Python 3.x
-- Pygame library
-
-You can install Pygame with:
 ```bash
-pip install pygame
+git clone https://github.com/yourusername/amazon-q-developer-cli-demo.git
+cd amazon-q-developer-cli-demo
 ```
 
-## How to Play
+Install the required dependencies:
 
-1. Navigate to the game directory of your choice
-2. Follow the installation instructions in the game's README
-3. Run the game using Python:
-   - For Snake Game: `python snake_game.py`
-   - For Pacman-Nibbles: `python pacman_nibbles.py`
+```bash
+pip install -r requirements.txt
+```
 
-## About This Repository
+## Usage
 
-This repository was created as a demonstration for showcasing Amazon Q Developer CLI capabilities. 
-Both games are fully functional and provide different gaming experiences with similar technology stacks.
+Each project in this repository can be run separately. Navigate to the project directory and follow the instructions in the project-specific README.
+
+### Running the Pacman Nibbles Game
+
+```bash
+cd pacman-nibbles
+python main.py
+```
+
+### Running the Snake Game
+
+```bash
+cd snake-game
+python main.py
+```
+
+## Development
+
+### Requirements
+
+This project requires Python 3.9.5 or higher.
+
+### Setting Up Development Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements-dev.txt
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
