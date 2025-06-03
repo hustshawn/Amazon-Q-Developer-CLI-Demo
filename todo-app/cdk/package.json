@@ -1,0 +1,26 @@
+{
+  "name": "todo-app-cdk",
+  "version": "1.0.0",
+  "description": "CDK infrastructure for Todo App",
+  "main": "bin/todo-app.js",
+  "scripts": {
+    "build": "echo \"No build required\"",
+    "synth": "cdk synth",
+    "diff": "cdk diff",
+    "deploy": "cdk deploy",
+    "bootstrap": "cdk bootstrap"
+  },
+  "keywords": [
+    "aws",
+    "cdk",
+    "todo-app"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-cdk": "^2.1017.1",
+    "aws-cdk-lib": "^2.200.0",
+    "constructs": "^10.4.2",
+    "path": "^0.12.7"
+  }
+}

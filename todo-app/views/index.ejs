@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Todo App</h1>
+    
+    <form id="todoForm" action="/todos" method="POST" class="todo-form">
+      <input 
+        type="text" 
+        name="todoText" 
+        placeholder="Add a new todo..." 
+        required
+        autocomplete="off"
+        id="todoInput"
+      >
+      <button type="submit">Add</button>
+    </form>
+
+    <ul class="todo-list">
+      <% if (todos.length === 0) { %>
+        <li class="empty-state">No todos yet! Add one above.</li>
+      <% } %>
+      
+      <% todos.forEach(todo => { %>
+        <li class="todo-item <%= todo.completed ? 'completed' : '' %>">
+          <span class="todo-text"><%= todo.text %></span>
+          <div class="todo-actions">
+            <form action="/todos/<%= todo.id %>/toggle" method="POST" class="inline-form">
+              <button type="submit" class="btn-toggle">
+                <%= todo.completed ? '↩️' : '✅' %>
+              </button>
+            </form>
+            <form action="/todos/<%= todo.id %>/delete" method="POST" class="inline-form">
+              <button type="submit" class="btn-delete">🗑️</button>
+            </form>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+  
+  <script src="/js/app.js"></script>
+</body>
+</html>

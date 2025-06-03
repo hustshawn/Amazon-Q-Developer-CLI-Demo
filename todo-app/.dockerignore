@@ -1,0 +1,6 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+cdk/cdk.out/
+cdk/node_modules/
