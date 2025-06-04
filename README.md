@@ -8,13 +8,16 @@ This repository contains demo applications to demonstrate the features and capab
 
 ## Projects
 
-- **pacman-nibbles**: A simple Pacman-inspired game
-- **snake-game**: A classic snake game implementation 
+- **pacman-nibbles**: A simple Pacman-inspired game combining elements of classic Pacman and Snake
+- **snake-game**: A classic snake game implementation with multiple difficulty levels
+- **todo-app**: A modern todo application with React frontend and Express backend
 
 ## Prerequisites
 
-- Python 3.8 or higher
+- Python 3.8 or higher (for game projects)
 - pip (Python package installer)
+- Node.js and npm (for todo-app)
+- Docker and Docker Compose (optional, for todo-app)
 
 ## Installation
 
@@ -25,11 +28,7 @@ git clone https://github.com/yourusername/amazon-q-developer-cli-demo.git
 cd amazon-q-developer-cli-demo
 ```
 
-Install the required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
+Each project has its own dependencies. Please refer to the project-specific README files for detailed installation instructions.
 
 ## Usage
 
@@ -39,29 +38,63 @@ Each project in this repository can be run separately. Navigate to the project d
 
 ```bash
 cd pacman-nibbles
-python main.py
+# Install dependencies
+pip install pygame
+# Run the game
+python pacman_nibbles.py
 ```
 
 ### Running the Snake Game
 
 ```bash
 cd snake-game
-python main.py
+# Install dependencies
+pip install pygame
+# Run the game
+python snake_game.py
 ```
+
+### Running the Todo App
+
+#### Using Docker Compose (Recommended)
+
+```bash
+cd todo-app
+docker-compose up --build
+```
+
+The application will be available at:
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:3001/api/todos
+
+#### Running Frontend and Backend Separately
+
+Please refer to the todo-app's README.md for detailed instructions on running the frontend and backend separately.
 
 ## Development
 
-### Requirements
+### Python Game Projects Requirements
 
-This project requires Python 3.9.5 or higher.
+The game projects require:
+- Python 3.8 or higher
+- Pygame library
 
-### Setting Up Development Environment
+### Setting Up Python Development Environment
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements-dev.txt
+pip install pygame
 ```
+
+### Todo App Development Requirements
+
+The todo-app requires:
+- Node.js 14 or higher
+- npm 6 or higher
+- Docker and Docker Compose (optional)
+
+Please refer to the todo-app's README.md for detailed development setup instructions.
 
 ## Contributing
 
